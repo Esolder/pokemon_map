@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models  # noqa F401
 
 class Pokemon(models.Model):
@@ -8,5 +10,6 @@ class Pokemon(models.Model):
         return self.title
 
 class PokemonEntity(models.Model):
+    pokemon = models.ForeignKey(Pokemon, verbose_name='Покемон', on_delete=models.CASCADE, null=True, blank=True)
     lat = models.FloatField('Долгота')
     lon = models.FloatField('Широта')
