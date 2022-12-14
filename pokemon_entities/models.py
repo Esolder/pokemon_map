@@ -12,7 +12,7 @@ class Pokemon(models.Model):
                                 max_length=200,
                                 blank=True)
     description = models.TextField('Описание', blank=True)
-    img = models.ImageField('Изображение', null=True)
+    img = models.ImageField('Изображение', null=True, blank=True)
     previous_evolution = models.ForeignKey('self',
                                            verbose_name='Эволюционировал из',
                                            related_name='next_evolution',
