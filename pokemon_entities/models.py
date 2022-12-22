@@ -15,7 +15,7 @@ class Pokemon(models.Model):
     img = models.ImageField('Изображение', null=True, blank=True)
     previous_evolution = models.ForeignKey('self',
                                            verbose_name='Эволюционировал из',
-                                           related_name='next_evolution',
+                                           related_name='next_evolutions',
                                            on_delete=models.SET_NULL,
                                            null=True,
                                            blank=True)
