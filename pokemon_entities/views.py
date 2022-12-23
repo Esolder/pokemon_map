@@ -62,7 +62,7 @@ def show_pokemon(request, pokemon_id):
                                                     disappeared_at__gte=time,
                                                     pokemon=pokemon)
 
-    pokemon_info = {"pokemon_id": 1,
+    pokemon_info = {"pokemon_id": pokemon_id,
                     "title_ru": pokemon.title,
                     "title_en": pokemon.title_en,
                     "title_jp": pokemon.title_jp,
